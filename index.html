@@ -23,17 +23,28 @@
             );
         }
 
-        .wrapper {
-            background-color: #ffffff;
-            width: 450px;
-            padding: 50px 0;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 50%;
-            border-radius: 8px;
-            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
-        }
+        h1 {
+        padding-top: 270px;
+        text-align: center; /* Center the heading */
+        font-size: 50px; /* Adjust font size */
+        color: #000000; /* Change font color */
+        margin-bottom: 30px; /* Add some space below the heading */
+    
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center the content horizontally */
+    background-color: #ffffff;
+    width: 450px;
+    padding: 50px 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
 
         .container {
             width: 300px;
@@ -87,16 +98,20 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <input type="password" id="password" oninput="strengthChecker()">
-            <span id="toggle" onclick="toggle()">
-                <i class="fas fa-eye"></i>
-            </span>
-            <div id="strength-bar"></div>
+    <body>
+        <h1>Password Strength Checker</h1>
+        <div class="wrapper">
+            <div class="container">
+                <input type="password" id="password" oninput="strengthChecker()">
+                <span id="toggle" onclick="toggle()">
+                    <i class="fas fa-eye"></i>
+                </span>
+                <div id="strength-bar"></div>
+            </div>
+            <p id="msg"></p>
         </div>
-        <p id="msg"></p>
-    </div>
+    </body>
+    
 
     <script>
         // Object to keep track of password strength parameters
